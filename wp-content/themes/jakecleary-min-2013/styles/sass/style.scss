@@ -1,0 +1,372 @@
+// SASS template file
+
+/*
+
+Theme Name: JC.MIN.2K13
+Desitpion: Minimist(ish) theme designed and built for jakecleary.net.
+Author: Jake Cleary
+Author URI: http://jakecleary.net
+
+*/
+
+//	    TABLE OF CONENTS:
+
+//		00 - Variables
+//		01 - Reset
+//  	02 - Core Structure
+//		03 - Typography
+//  	04 - Header
+//  	05 - Sidebar
+//      06 - Footer
+//      07 - Home
+//      08 - Page & Single
+//      09 - Buttons & Icons
+//      10 - Forms
+
+
+//		00 - Variables
+/////////////////////////////////////////
+$primary: #20B2AA;
+$secondary: #222;
+$t_primary: #FFF;
+$t_secondary: #222;
+
+
+//		01 - Reset
+/////////////////////////////////////////
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+::selection {
+	background: $primary;
+}
+
+::-moz-selection {
+	background: $primary;
+}
+
+//		02 - Core Structure
+/////////////////////////////////////////
+html, body
+{
+    height: 100%;
+    min-height: 100%;
+}
+
+body {
+	font-family: 'Roboto Slab', 'Times' serif;
+	font-size: 10px;
+	background-color: $secondary;
+	color: $t_primary;
+}
+
+.page-content {height: 100%;}
+
+header.page {
+	width: 333px;
+	float: left;
+	height: 100%;
+	padding: 20px 50px;
+	text-align: center;
+	position: fixed;
+	z-index: 100;
+	background: $primary;
+}
+
+.primary-content {
+	width: 45%;
+	float: left;
+	padding: 20px 40px;
+	margin-left: 353px;
+}
+
+//		03 - Typography
+/////////////////////////////////////////
+p, li {
+	font-size: 1.6em;
+	line-height: 2em;
+}
+
+p, ul {
+	margin-bottom: 1em;
+}
+
+h4, h3, h2, h1 {
+
+}
+
+h4 {
+	font-size: 1.8em;
+	line-height: 2.2em;
+}
+
+h3 {
+	font-size: 2.4em;
+	line-height: 2.8em;
+}
+
+h2 {
+	font-size: 3em;
+	line-height: 3em;
+
+}
+
+h1 {
+	font-size: 4em;
+	line-height: 3.2em;
+}
+
+ul {
+
+}
+
+li {
+
+}
+
+a {
+	font-size: 1em;
+	color: inherit;
+	text-decoration: none;
+	-webkit-transition: all .2s;
+	-moz-transition: all .2s;
+	-o-transition: all .2s;
+	-ms-transition: all .2s;
+	transition: all .2s;
+
+	&:hover {
+		color: $primary;
+	}
+}
+
+//		04 - Header
+////////////////////////////////////////
+header.page {
+
+	h1, p {
+		color: $t_secondary;
+	}
+
+	.me {
+		border-radius: 50%;
+		margin: 20px 0 0;
+		box-shadow: 1px 1px #FFF;
+		width: 150px;
+		height: 150px;
+		cursor: pointer;
+		-webkit-transition: .3s all;
+		-moz-transition: .3s all;
+		-o-transition: .3s all;
+		-ms-transition: .3s all;
+		transition: .3s all;
+
+		&:hover {
+			-webkit-transform: rotate(5deg);
+			-moz-transform: rotate(5deg);
+			-o-transform: rotate(5deg);
+			-ms-transform: rotate(5deg);
+			transform: rotate(5deg);
+		}	
+	}
+
+	h1 {
+		line-height: 2em;
+		text-shadow: 1px 1px 0px rgb(255,255,255);
+		text-shadow: 1px 1px 0px rgba(255,255,255,.8);
+	}
+
+	nav {
+		margin-bottom: 15px;
+
+		ul {
+		list-style: none;
+		
+			li {
+				display: inline;
+
+				&.break {
+					color: $t_secondary;
+				}
+			}
+	
+		}
+
+	}
+
+	a {
+		color: #FFF;
+		background-color: none;
+		
+		&:hover {
+			color: #222;
+		}
+	
+	}
+
+	p {
+		font-weight: bold;
+
+		text-shadow: 1px 1px 0px rgba(255,255,255,.8);
+	}
+
+	.barely-legally-binding {
+		position: absolute;
+		bottom: 60px;
+		font-size: 1.1em;
+		display: block;
+		margin-left: -79px;
+		left: 50%;
+		text-shadow: none;
+	}
+
+}
+
+//		05 - Home
+////////////////////////////////////////
+article {
+
+	margin-bottom: 10em;
+
+	&.first, &.single {
+		margin-top: 20em;
+	}
+
+	header {
+		padding-right: 50px;
+		margin-bottom: 2em;
+		position: relative;
+		padding-bottom: 1em;
+		border-bottom: 4px solid $primary;
+	}
+
+	h2 {
+		line-height: 1em;
+	}
+
+	time {
+		position: absolute;
+		bottom: 1em;
+		right: 0;
+	}
+
+	p {
+		clear: both;
+	}
+
+	.excerpt {
+		margin-bottom: 1em;
+	}
+
+	.content {
+		a {
+			border-bottom: 1px solid $primary;
+			padding-bottom: 1px;
+
+			&:hover {
+				border-bottom-color: $t_primary;
+			}
+		}
+	}
+}
+
+//		06 - Talk
+////////////////////////////////////////
+#talk {
+	width: 100%;
+	margin: auto;
+
+	input, textarea {
+		width: 100%;
+		margin: 0 0 0px;
+		border: none;
+		background: $primary;
+		padding: 20px;
+		color: $t_primary;
+		font-family: 'Roboto Slab', 'Times' serif;
+		font-size: 2em;
+	}
+
+	#name {
+		margin-top: 20px;
+	}
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    $t_primary;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    $t_primary;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    $t_primary;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    $t_primary;
+}
+
+//		07 - Media Queries
+////////////////////////////////////////
+@media screen and (max-width : 900px ) {
+	header.page {
+		float: none;
+		width: 100%;
+		height: auto;
+		text-align: left;
+		top: 0;
+		position: static;
+		overflow: hidden;
+
+		.me {
+			float: left;
+			width: 90px;
+			height: auto;
+			margin: 0 35px 0 0;
+		}
+
+		h1 {
+			line-height: 1em;
+			margin-top: 12px;
+		}
+
+		nav, ul {
+			margin: 0;
+		}
+
+		p {
+			display: none;
+		}
+	}
+	
+	.primary-content {
+		width: 100%;
+		float: none;
+		padding: 0 40px 20px;
+		margin: 10em 0 0 0;
+
+		article.first {
+			margin-top: 0;
+		}
+
+		article.single {
+			margin-top: 3em;
+		}
+	}
+}
+
+@media screen and (max-width : 480px ) {
+	header.page {
+		h1 {
+			font-size: 24px;
+		}
+
+		ul li {
+			font-size: 14px;
+		}
+	}
+}
