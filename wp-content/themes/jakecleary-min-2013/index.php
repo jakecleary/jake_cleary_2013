@@ -30,15 +30,9 @@ get_header();
 				</time>
 			</header>
 			<div class="content">
-				<?php
-					$content = get_the_content();
-					$trimmed_content = wp_trim_words( $content, 40, '...' );
-					echo '<p class="excerpt">' . $trimmed_content . '</p>';
-				?>
+				<?php grab_excerpt( 40 ); ?>
 			</div>
 			<p><a href="'. get_permalink() .'">Read More &rarr;</a></p>
-
-
 		</article>
 
 	<?php endwhile; else : ?>

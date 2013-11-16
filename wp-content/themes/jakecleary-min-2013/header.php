@@ -5,7 +5,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width" />
-	<title><?php bloginfo('name'); ?> <?php wp_title(); ?></title>
+	<title><?php bloginfo('url'); ?> <?php wp_title(); ?></title>
 	<?php wp_head(); ?>
 </head>
 <body>
