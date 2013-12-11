@@ -16,7 +16,7 @@ get_header();
 		
 		<article class="article-<?php the_ID(); echo $wp_query->current_post == 0 ? ' first' : '' ; ?>">
 			<header>
-				<h2><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
+				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><h2><?php the_title(); ?></h2></a>
 				<time>
 					<?php 
 
@@ -30,7 +30,7 @@ get_header();
 				</time>
 			</header>
 			<div class="content">
-				<?php grab_excerpt( 40 ); ?>
+				<?php grab_excerpt( 25 ); ?>
 			</div>
 			<p><a href="'. get_permalink() .'">Read More &rarr;</a></p>
 		</article>

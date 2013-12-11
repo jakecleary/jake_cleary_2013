@@ -25,15 +25,24 @@ function jc_img( $img, $format ) {
 	echo $path; 
 }
 
-function grab_excerpt( $lengh = 55, $more = 'dots' ) {
+function custom_read_more() {
+    return '... <a class="read-more" href="' . get_permalink( get_the_ID() ) . '">more&nbsp;&raquo;</a>';
+}
+
+function excerpt( $limit ) {
+    return wp_trim_words( get_the_excerpt(), $limit );
+}
+
+
+function grab_excerpt( $length = 55, $more = 'dots' ) {
 	$content = get_the_content();
 	
 	if ( $more = 'dots' ) {
-		$more = '...';
+		$the_more = '...';
 	} else {
-		$more = '<a href="' . the_permalink() . '" title="' . the_title() . '"> read more...</a>';
+		$the_more = '<a href="' . the_permalink() . '" title="' . the_title() . '"> read more...</a>';
 	}
 
-	$excerpt = wp_trim_words( $content, $length, $more );
+	$excerpt = wp_trim_words( get_the_content(), $length, $the_more );
 	echo '<p class="excerpt">' . $excerpt . '</p>';
 }
